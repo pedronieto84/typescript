@@ -1,7 +1,4 @@
-// DESESTRUCTURACIÓN DE ARRAYS
-// Sirven para coger los elementos de un array y convertirlos en propiedades.
-var ciudades = [
-    'Almeria', 'Terrassa', 'Alcorcón'
-];
-var alcorcon = ciudades[0], almeria = ciudades[1], terrassa = ciudades[2];
-console.log(alcorcon);
+var numeros = [10, 4, 7, 15, 3, 25];
+console.log(numeros); // Imprime un array.
+console.log.apply(// Imprime un array.
+console, numeros);
