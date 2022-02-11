@@ -1,18 +1,15 @@
-// Parámetros en funciones obligatorios
+// Parámetros en funciones: Opcionales.
 
-function hola(nombre: string){
-    console.log('hola', nombre)
+function hola(nombre?: string){
+    if (nombre) {
+        console.log(nombre);            
+    } else {
+        console.log("Hola desconocido");
+        
+    }
 }
 
-// Si no le paso ningún parámetro, me da error.
+// Esta vez si no le defino ningún parámetro no da error, porque es opcional.
+hola();
 
-// Ejemplo de mensaje de error si no le paso nada
-hola()
-
-
-// Ejemplo de mensaje de error si le paso un dato erróneo.
-hola(12)
-
-
-// Si le paso un dato aceptado, me lo acepta.
 hola('Juan')
