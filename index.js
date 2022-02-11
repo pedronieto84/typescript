@@ -1,13 +1,14 @@
-// Parámetros en funciones: Por defecto.
-function hola(nombre) {
-    if (nombre === void 0) { nombre = "Desconocido"; }
-    if (nombre) {
-        console.log(nombre);
-    }
-    else {
-        console.log(nombre);
-    }
-}
-// Esta vez si no le defino ningún parámetro no da error, porque es opcional.
-hola();
-hola('Juan');
+// DESESTRUCTURACIÓN DE OBJETOS
+// Sirven para convertir las propiedades de un objeto en variables
+var persona = {
+    nombre: "Juan",
+    edad: 30,
+    ciudad: "Almería"
+};
+//let {nombre, edad } = persona
+// Es cómo hacer
+var nombre = persona.nombre;
+// let edad = persona.edad
+console.log(nombre);
+persona.nombre = "Reasignado";
+console.log(nombre, persona.nombre);
