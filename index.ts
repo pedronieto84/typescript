@@ -1,15 +1,18 @@
-// Template literals
+// Parámetros en funciones obligatorios
 
-let nombre: string = "Juan"
-let apellido: string = "Perez"
-let edad: number = 32
+function hola(nombre: string){
+    console.log('hola', nombre)
+}
 
-// Concatenación de strings con typescript
+// Si no le paso ningún parámetro, me da error.
 
-let texto = `Hola, ${nombre} ${apellido} (${edad})`
+// Ejemplo de mensaje de error si no le paso nada
+hola()
 
-console.log(texto)
 
-// Esto loguea en el navegador
+// Ejemplo de mensaje de error si le paso un dato erróneo.
+hola(12)
 
-// Hola Juan Perez, cómo estás
+
+// Si le paso un dato aceptado, me lo acepta.
+hola('Juan')
