@@ -1,9 +1,13 @@
-// Template literals
-var nombre = "Juan";
-var apellido = "Perez";
-var edad = 32;
-// Concatenación de strings con typescript
-var texto = "Hola, ".concat(nombre, " ").concat(apellido, " (").concat(edad, ")");
-console.log(texto);
-// Esto loguea en el navegador
-// Hola Juan Perez, cómo estás
+// Parámetros en funciones: Por defecto.
+function hola(nombre) {
+    if (nombre === void 0) { nombre = "Desconocido"; }
+    if (nombre) {
+        console.log(nombre);
+    }
+    else {
+        console.log(nombre);
+    }
+}
+// Esta vez si no le defino ningún parámetro no da error, porque es opcional.
+hola();
+hola('Juan');
