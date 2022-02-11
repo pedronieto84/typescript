@@ -1,20 +1,19 @@
-// DESESTRUCTURACIÓN DE OBJETOS
+// DESESTRUCTURACIÓN DE ARRAYS
 
-// Sirven para convertir las propiedades de un objeto en variables
+// Sirven para coger los elementos de un array y convertirlos en propiedades.
 
-const persona = {
-    nombre: "Juan",
-    edad: 30,
-    ciudad: "Almería"
-}
+const ciudades: string[] = [
+    'Almeria', 'Terrassa', 'Alcorcón'
+]
 
-let {nombre, edad } = persona
 
-// Es cómo hacer
-// let nombre = persona.nombre
-// let edad = persona.edad
+let [ alcorcon, almeria, terrassa ] = ciudades
 
-console.log(nombre, edad);
+// Pero cuidado que los nombres que he puesto no confundan
+// los he puesto a posta, no se va a fijar en el nombre, sino 
+// en la posición en el array.
+
+console.log( alcorcon );
 
 
 

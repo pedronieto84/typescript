@@ -1,14 +1,7 @@
-// DESESTRUCTURACIÓN DE OBJETOS
-// Sirven para convertir las propiedades de un objeto en variables
-var persona = {
-    nombre: "Juan",
-    edad: 30,
-    ciudad: "Almería"
-};
-//let {nombre, edad } = persona
-// Es cómo hacer
-var nombre = persona.nombre;
-// let edad = persona.edad
-console.log(nombre);
-persona.nombre = "Reasignado";
-console.log(nombre, persona.nombre);
+// DESESTRUCTURACIÓN DE ARRAYS
+// Sirven para coger los elementos de un array y convertirlos en propiedades.
+var ciudades = [
+    'Almeria', 'Terrassa', 'Alcorcón'
+];
+var alcorcon = ciudades[0], almeria = ciudades[1], terrassa = ciudades[2];
+console.log(alcorcon);
