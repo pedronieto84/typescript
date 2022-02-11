@@ -1,15 +1,8 @@
-let nombre: string = "Pedro"
-let edad: number = 38
-let persona: boolean = true
+let spiderman = {
+    nombre: "Peter",
+    edad: 20
+}
 
-let hoy: Date = new Date()
-
-hoy = new Date('2020-10-21')
-
-let cualquiera: any;
-
-cualquiera = nombre
-cualquiera = edad
-cualquiera = persona
-cualquiera = hoy
-
+spiderman = {
+    
+}
