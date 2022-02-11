@@ -1,15 +1,8 @@
-// Parámetros en funciones: Por defecto.
+// Parámetros opcionales siempre deben ir al final o dará error.
 
-function hola(nombre = "Desconocido"){
-    if (nombre) {
-        console.log(nombre);            
-    } else {
-        console.log(nombre);
-        
-    }
+function hola(nombre?, apellido){
+
 }
 
-// Esta vez si no le defino ningún parámetro cogerá el que he definido por defecto.
-hola();
 
-hola('Juan')
+
