@@ -1,5 +1,21 @@
-import User, { logHola } from './user.js';
+class Animal {
+    constructor(){
+        this.alive = true 
+    }
 
-const user = new User('Juan', 20)
-user.logName()
-logHola()
+    come(){
+        console.log("Este animal esta comiendo");
+    }
+}
+
+class Raton extends Animal {
+    corre(){
+        console.log('corre');
+    }
+}
+
+
+
+const raton = new Raton()
+raton.come()
+raton.corre()
