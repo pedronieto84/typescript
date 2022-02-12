@@ -4,11 +4,11 @@
 interface Persona {
     nombre: string
     caracteristicas: CaracteristicasFisicas,
-    amigos: Persona[]
+    amigos: Persona
 }
 
 interface CaracteristicasFisicas {
     altura: number
     edad: number
-    sexo: string
+    sexo: string | number // por ejemplo, puede ser que 1 sea mujer y 0 sea hombre
 }
