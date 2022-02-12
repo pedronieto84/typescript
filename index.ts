@@ -1,20 +1,14 @@
 
-// Estos no necesitan explicación
-let nombre: string;
-let number: number;
-let boleano: boolean;
+// Las interfaces son estructuras más complejas ( De echo en mis proyectos con estas ya me basta y me sobra).
 
-// Los arrays se definen así, primero se dice de que van a ser, acompañados de []
-let array: number[];
-let cualquiera: any;
-
-// Types son para definir Object Types
-type Geoposition = {
-    x: string 
-    y: string 
+interface Persona {
+    nombre: string
+    caracteristicas: CaracteristicasFisicas,
+    amigos: Persona[]
 }
 
-const getGeopositionX = (coordinates: Geoposition) =>{
-    return coordinates.x
+interface CaracteristicasFisicas {
+    altura: number
+    edad: number
+    sexo: string
 }
-
