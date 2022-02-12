@@ -1,20 +1,20 @@
-class Ciudad {
-    public nombre: string 
-    private poblacion: number 
-    extension: number
 
+// Estos no necesitan explicación
+let nombre: string;
+let number: number;
+let boleano: boolean;
 
-    // EL constructor se llama automaticamente siempre
-    // que se instancia la clase.
-    constructor(nombre: string, poblacion: number){
-        this.nombre = nombre
-        this.poblacion = poblacion
-    }
+// Los arrays se definen así, primero se dice de que van a ser, acompañados de []
+let array: number[];
+let cualquiera: any;
+
+// Types son para definir Object Types
+type Geoposition = {
+    x: string 
+    y: string 
 }
 
+const getGeopositionX = (coordinates: Geoposition) =>{
+    return coordinates.x
+}
 
-let ciudad2 = new Ciudad('Almeria', 196000)
-
-
-console.log(ciudad2);
-// Esto loguea {nombre: "Almeria", poblacion: 196000}
