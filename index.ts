@@ -1,26 +1,5 @@
-interface Persona {
-    nombre: string
-    caracteristicas?: CaracteristicasFisicas,
-    amigos ?: Persona // el interrogante también aquí sirve para identificar que son opcionales
-}
+// los decoradores son un tipo de función con unas características especiales, los veremos en angular, por ejemplo en el @Input
 
-interface CaracteristicasFisicas {
-    altura: number
-    edad: number
-    sexo: string | number // por ejemplo, puede ser que 1 sea mujer y 0 sea hombre
-}
+// Por ahora basta con saber que se les identifica por el @.
 
-
-// Los genericos me sirven para pasarle desde fuera el valor.
-
-// Defino un tipo de función "Si, no lo había mencionado, con typescript también podemos definir tipos de funciones"
-
-function ejemploGenerico <T>(arg: T):T{
-    return arg
-}
-
-const number = ejemploGenerico<number>(1)
-
-const string = ejemploGenerico<string>('asdf')
-
-const Persona = ejemploGenerico<Persona>({ nombre: 'Juan' })
+@Input() data;
