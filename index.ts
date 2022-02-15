@@ -1,5 +1,16 @@
-// los decoradores son un tipo de función con unas características especiales, los veremos en angular, por ejemplo en el @Input
+// Definimos una interfaz
+interface ClockInterface {
+    currentTime: Date;
+    getTime(): Date;
+  }
+   
 
-// Por ahora basta con saber que se les identifica por el @.
+  // Definimos una clase y con la sintaxis "implements" nos deñimos a la definición de la interfaz
+  class Clock implements ClockInterface {
+    currentTime: Date = new Date();
+    constructor(h: number, m: number) {}
 
-@Input() data;
+    getTime(): Date {
+        return this.currentTime
+    }
+  }
