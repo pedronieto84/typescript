@@ -10,18 +10,21 @@ const promiseEjemplo = (result, delay) => {
   });
 };
 
-// No importa el orden, ocurren de forma asíncrona y en el then y el catch definimos el callback ( lo que sucederá en cada escenario.)
-(async () => {
-  try {
-    // De esta forma conseguimos hacer que una se ejecute después de la otra
-    const res = await Promise.all([
-      promiseEjemplo(true, 2000),
-      promiseEjemplo(false, 1000),
-    ]);
+// Cambiando el true por false vemos un error y cómo entra dentro del catch
+promiseEjemplo(true)
+.then((res)=>{
+  console.log('primer then');
     console.log(res);
-  } catch (error) {
-    // también simplificamos sintaxis agrupando el error
-    const rej = error;
-    console.error("error", rej);
-  }
-})();
+    return true
+})
+.then((resultFromPreviuous) => {
+  console.log('segundo then');
+  console.log(resultFromPreviuous);
+  return {a:1}
+})
+.catch((err)=>{
+  console.log('error', err);
+})
+.finally(()=>{
+  console.log('finally');
+})
